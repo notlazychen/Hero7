@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Hero7.CSharp.Plugins", "UnityVS.Hero7.CSharp.Plugins.csproj", "{9236033A-7F9B-9839-3338-187D1971D309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Hero7.CSharp", "UnityVS.Hero7.CSharp.csproj", "{C2CE06B1-6AA6-45B8-DDD1-CA75E49F7C10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9236033A-7F9B-9839-3338-187D1971D309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9236033A-7F9B-9839-3338-187D1971D309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9236033A-7F9B-9839-3338-187D1971D309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9236033A-7F9B-9839-3338-187D1971D309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2CE06B1-6AA6-45B8-DDD1-CA75E49F7C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2CE06B1-6AA6-45B8-DDD1-CA75E49F7C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2CE06B1-6AA6-45B8-DDD1-CA75E49F7C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2CE06B1-6AA6-45B8-DDD1-CA75E49F7C10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
