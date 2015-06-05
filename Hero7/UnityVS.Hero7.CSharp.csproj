@@ -73,10 +73,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChatHandle.cs" />
     <Compile Include="Assets\ConcurrentQueue.cs" />
     <Compile Include="Assets\Entity\GamePackageEntity.cs" />
+    <Compile Include="Assets\EventManager.cs" />
     <Compile Include="Assets\Logic\ChatCommand.cs" />
-    <Compile Include="Assets\LoginButton.cs" />
     <Compile Include="Assets\Network\GameManager.cs" />
     <Compile Include="Assets\Network\ICommand.cs" />
     <Compile Include="Assets\Poq Xert\PX Message Box\Example\PXMSGExample.cs" />
@@ -86,8 +87,11 @@
     <Compile Include="Assets\References\EndianBitConverter.cs" />
     <Compile Include="Assets\References\Endianness.cs" />
     <Compile Include="Assets\References\LittleEndianBitConverter.cs" />
-    <Compile Include="Assets\ChatHandle.cs" />
-    <Compile Include="Assets\ServerListView.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\Enemy.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\TeamMember.cs" />
+    <Compile Include="Assets\Scripts\UI\LoginButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ServerListView.cs" />
+    <Compile Include="Assets\Scripts\Unit\Dest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />

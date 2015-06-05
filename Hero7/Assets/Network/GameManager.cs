@@ -168,17 +168,17 @@ public class GameManager
 }
 
 public class Server
+{
+    public string Name { get; set; }
+
+    public string IP { get; set; }
+
+    public int Port { get; set; }
+
+    public int DestID { get; set; }
+
+    public override string ToString()
     {
-        public string Name { get; set; }
-
-        public string IP { get; set; }
-
-        public int Port { get; set; }
-
-        public int DestID { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
+        return Name;
     }
+}
