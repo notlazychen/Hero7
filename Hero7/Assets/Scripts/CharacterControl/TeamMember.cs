@@ -40,16 +40,7 @@ public class TeamMember : MonoBehaviour
                 RaycastHit hitInfo;
                 if (Physics.Raycast(ray, out hitInfo, 200, 1 << 10))
                 {
-                    //var distance = (hitInfo.point - this.transform.position).magnitude;
-                    //iTween.MoveTo(this.gameObject, hitInfo.point, distance / Speed);
-                    if (_destObject)
-                    {
-                        Destroy(_destObject);
-                    }
-                    _destObject = Instantiate(PrefabDest, hitInfo.point, Quaternion.identity) as GameObject;
-                    //dest.name = "Dest" + Name;
-                    iTween.LookTo(gameObject, hitInfo.point, 0.5f);
-                    State = State.Move;
+                    TurnTo(hitInfo.point);
                 }
             }
         }
@@ -61,7 +52,7 @@ public class TeamMember : MonoBehaviour
                 Enemy enemy = FindObjectOfType<Enemy>();
                 if (enemy)
                 {
-                    State = State.Attack;
+                    TurnTo(enemy.transform.position);
                 }
                 break;
             case State.Move:
@@ -72,12 +63,33 @@ public class TeamMember : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    void TurnTo(Vector3 dest)
+    {
+        if (_destObject)
+        {
+            Destroy(_destObject);
+        }
+        _destObject = Instantiate(PrefabDest, dest, Quaternion.identity) as GameObject;
+        iTween.LookTo(gameObject, dest, 0.5f);
+        State = State.Move;
+    }
+
+    void Top()
+    {
+        State = State.Idle;
+        Destroy(_destObject);
+    }
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == _destObject)
         {
-            State = State.Idle;
+            Top();
+        }
+        else if (other.tag == "Enemy")
+        {
             Destroy(_destObject);
+            State = State.Attack;
         }
     }
 }
